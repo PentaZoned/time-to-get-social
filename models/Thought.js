@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const reactionSchema = require('./Reaction');
 
 const thoughtSchema = new Schema(
     {
@@ -11,14 +12,13 @@ const thoughtSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now(),
+            get: formatDate
         },
         username: {
             type: String,
             required: true
         },
-        reactions: {
-            
-        }
+        reactions: [reactionSchema]
     },
     {
         toJSON: {
@@ -27,6 +27,11 @@ const thoughtSchema = new Schema(
         id: false,
     }
 );
+
+function formatDate(date) {
+    var newDate = `${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`;
+    return newDate;
+};
 
 thoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length;
