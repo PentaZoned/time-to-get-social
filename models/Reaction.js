@@ -1,5 +1,10 @@
 const { Schema, Types } = require('mongoose');
 
+function formatDate(date) {
+    var newDate = `${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`;
+    return newDate;
+};
+
 const reactionSchema = new Schema(
     {
         reactionId: {
@@ -22,10 +27,5 @@ const reactionSchema = new Schema(
         }
     }
 );
-
-function formatDate(date) {
-    var newDate = `${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`;
-    return newDate;
-};
 
 module.exports = reactionSchema;
