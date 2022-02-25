@@ -1,17 +1,21 @@
-const names = [
-    'Alex',
-    'Edward',
-    'Emily',
-    'Jones',
-    'Smith',
-    'Mark',
-    'Jarold',
+const usernames = [
+    'DarkMagician56',
+    'EdwardScissorHands101',
+    'BilboBaggins3467',
+    'IndianaJones41',
+    'WillSmith404',
+    'RobinHood999',
+    'LordFarquaad237',
 ];
 
-// Gets a random element in an array
-const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
+const emails = [
+    'randomname@gmail.com',
+    'lakersfan101@gmail.com',
+    'coding101@gmail.com',
+    'hellokitty111@gmail,com',
+    'engineer4123@gmail.com',
+    'needmoney@gmail.com',
+    'username@gmail.com'
+];
 
-// generates a full name by calling on getRandomArrItem twice using the names array
-const fullNameGenerator = () => `${getRandomArrItem(names)} ${getRandomArrItem(names)}`;
-
-module.exports = { fullNameGenerator };
+module.exports = { usernames, emails };
