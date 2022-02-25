@@ -18,4 +18,14 @@ const emails = [
     'username@gmail.com'
 ];
 
-module.exports = { usernames, emails };
+const thoughtsTextArray = [
+    'Today is sunny.',
+    'My dinner was delicious!',
+    'Why was my whole week stressful?',
+    'This new game is awesome! You guys have to give it a try!',
+    'I need more sleep.',
+    "I can't wait for the weekend.",
+    'I wish I was rich.',
+];
+
+module.exports = { usernames, emails, thoughtsTextArray };

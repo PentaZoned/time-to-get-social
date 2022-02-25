@@ -1,6 +1,6 @@
 const connection = require('../config/connection');
 const { User, Thought } = require('../models');
-const { usernames, emails } = require('./data');
+const { usernames, emails, thoughtsTextArray } = require('./data');
 
 connection.on('error', (err) => err);
 
@@ -15,8 +15,11 @@ connection.once('open', async () => {
 
     // Create an empty array to hold users for seeding
     const users = [];
+    // Create an empty array to hold thoughts for seeding
+    const thoughts = [];
 
-    // Create 7 usernames
+    // generate 7 usernames and emails from the imported arrays and push both
+    // as an object into the users array
     for(let i = 0; i < 7; i++) {
         const username = usernames[i];
         const email = emails[i];
@@ -28,9 +31,26 @@ connection.once('open', async () => {
         });
     }
 
-    await User.collection.insertMany(users);
+    // generate 7 thoughts and usernames from the imported arrays and push both
+    // as an object into the thoughts array
+    for(let i = 0; i < 7; i++) {
+        const thoughtText = thoughtsTextArray[i];
+        const username = users[i];
 
+        thoughts.push({
+            thoughtText,
+            username
+        })
+    }
+
+    // ensure the seeding is complete before doing anything else
+    await User.collection.insertMany(users);
+    await Thought.collection.insertMany(thoughts);
+
+    // show in the console what should appear in the database
     console.table(users);
+    console.table(thoughts);
+    console.info('Seeding complete!');
     process.exit(0);
 });
 
