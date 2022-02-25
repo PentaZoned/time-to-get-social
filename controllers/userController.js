@@ -24,7 +24,7 @@ module.exports = {
     },
     updateUser(req, res) {
         User.findOneAndUpdate(
-            { _id: req.params.applicationId },
+            { _id: req.params.userId },
             { $set: req.body },
             { runValidators: true, new: true }
         )
@@ -39,7 +39,7 @@ module.exports = {
             });
     },
     deleteUser(req, res) {
-        User.findOneAndRemove({ _id: req.params.applicationId })
+        User.findOneAndRemove({ _id: req.params.userId })
             .then((user) =>
                 !user
                     ? res.status(404).json({ message: 'No user with this id!' })
