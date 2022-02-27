@@ -34,8 +34,9 @@ The videos focuses on the perspective of the user.
 
 ## Screenshot
 
-[Screenshot of data being prepopulated through seeds](/assets/images/seeds.jpg)
-[Screenshot of the routes](/assets/images/routes.jpg)
+![Screenshot of data being prepopulated through seeds](/assets/images/seeds.jpg)
+
+![Screenshot of the routes](/assets/images/routes.jpg)
 
 ## Authors
 
@@ -48,4 +49,3 @@ The videos focuses on the perspective of the user.
 ## License
 
 This project is licensed under the MIT License 
-
