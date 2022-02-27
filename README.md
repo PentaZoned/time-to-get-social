@@ -31,7 +31,8 @@ The video focuses on the perspective of the user.
 
 ## Screenshot
 
-[ScreenShot of the Social Media API]()
+[Screenshot of data being prepopulated through seeds](/assets/images/seeds.jpg)
+[Screenshot of the routes](/assets/images/routes.jpg)
 
 ## Authors
 

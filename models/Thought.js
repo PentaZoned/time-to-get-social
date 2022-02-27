@@ -30,7 +30,7 @@ const thoughtSchema = new Schema(
 );
 
 function formatDate(date) {
-    var newDate = `${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`;
+    var newDate = `${date.getMonth()}/${date.getDate()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
     return newDate;
 };
 

@@ -22,7 +22,6 @@ module.exports = {
     createThought(req, res) {
         Thought.create(req.body)
             .then((thought) => res.json(thought))
-            .then
             .catch((err) => res.status(500).json(err));
     },
     // Update (PUT) a thought
