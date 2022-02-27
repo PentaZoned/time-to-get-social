@@ -14,20 +14,25 @@ connection.once('open', async () => {
     await Thought.deleteMany({});
 
     // Create an empty array to hold users for seeding
-    const users = [];
+    var users = [];
     // Create an empty array to hold thoughts for seeding
-    const thoughts = [];
+    var thoughts = [];
 
     // generate 7 usernames and emails from the imported arrays and push both
     // as an object into the users array
     for(let i = 0; i < 7; i++) {
         const username = usernames[i];
         const email = emails[i];
+        let friends = usernames[i+1];
 
-
+        if (i === 6) {
+            friends = usernames[0];
+        }
+        
         users.push({
             username,
-            email
+            email,
+            friends
         });
     }
 
@@ -35,7 +40,7 @@ connection.once('open', async () => {
     // as an object into the thoughts array
     for(let i = 0; i < 7; i++) {
         const thoughtText = thoughtsTextArray[i];
-        const username = users[i];
+        const username = usernames[i];
 
         thoughts.push({
             thoughtText,

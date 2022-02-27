@@ -28,4 +28,5 @@ const thoughtsTextArray = [
     'I wish I was rich.',
 ];
 
+
 module.exports = { usernames, emails, thoughtsTextArray };
