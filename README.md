@@ -27,7 +27,10 @@ Then the user can run the command `node index.js` to start the app and view the 
 
 ## Video Demonstration
 
-The video focuses on the perspective of the user.
+The videos focuses on the perspective of the user.
+
+* [Demonstration Video 1](https://watch.screencastify.com/v/4z3TdcLiYPJJBb6fNeTi)
+* [Demonstration Video 2](https://watch.screencastify.com/v/OHhknUq15fEm5qpHfZp5)
 
 ## Screenshot
 
